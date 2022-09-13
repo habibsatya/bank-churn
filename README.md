@@ -141,8 +141,17 @@ Standardisasi adalah teknik transformasi yang paling umum digunakan dalam tahap 
 ![std](https://user-images.githubusercontent.com/74854925/190021800-f7afd033-8d7f-402c-a871-784febeea1a4.jpg)
 
 ## Modeling
-K-Nearest Neighbor (KNN) adalah algoritma yang relatif sederhana dibandingkan dengan algoritma lain. Algoritma KNN menggunakan 'kesamaan fitur' untuk memprediksi nilai dari setiap data yang baru. Dengan kata lain, setiap data baru diberi nilai berdasarkan seberapa mirip titik tersebut dalam set pelatihan.
-KNN bekerja dengan membandingkan jarak satu sampel ke sampel pelatihan lain dengan memilih sejumlah k tetangga terdekat (dengan k adalah sebuah angka positif). Itulah mengapa algoritma ini dinamakan k-nearest neighbor (sejumlah k tetangga terdekat). KNN bisa digunakan untuk kasus klasifikasi dan regresi. Pada proyek kali ini, KNN akan akan digunakan untuk kasus klasifikasi.
+K-Nearest Neighbor (KNN) adalah algoritma yang relatif sederhana dibandingkan dengan algoritma lain. Algoritma KNN menggunakan 'kesamaan fitur' untuk memprediksi nilai dari setiap data yang baru. Dengan kata lain, setiap data baru diberi nilai berdasarkan seberapa mirip titik tersebut dalam set pelatihan. KNN bekerja dengan membandingkan jarak satu sampel ke sampel pelatihan lain dengan memilih sejumlah k tetangga terdekat (dengan k adalah sebuah angka positif). Itulah mengapa algoritma ini dinamakan k-nearest neighbor (sejumlah k tetangga terdekat). Pada proyek ini, algoritma KNN akan diakses melalui library Scikitlearn.
+Penjelasan untuk setiap parameter yang ada pada model KNN sebagai berikut:  
+- n_neighbors : merepresentasikan jumlah tetangga terdekat dari titik yang akan dihitung.  
+- weights : fungsi pembobotan yang akan digunakan dalam menghitung jarak antara tetangga terdekat dengan titik yang dimasukkan.   
+- algorithm : jenis algoritma yang akan digunakan untuk proses penghitungan tetangga terdekat.  
+- leaf_size : ukuran atau size yang mengontrol titik dalam node tertentu.  
+- p : power parameter untuk metrik yang menghitung jarak antara titik tertentu.  
+- metric : metrik yang digunakan pada tree.  
+- metric_params : keyword tambahan untuk metric function.  
+- n_jobs : banyaknya penugasan parallel untuk menjalankan pencarian tetangga terdekat.  
+Namun, pada proyek kali ini percobaan akan dilakukan dengan menggunakan parameter default terlebih dahulu untuk kemudian dilakukan hyperparameter tuning.
 
 ### Train Data
 Training data dengan menggunakan parameter default dari model KNN yang dipanggil melalui library Scikitlearn dan meng-import KNeighborsClassifier model.  
@@ -152,12 +161,7 @@ Selanjutnya, melihat akurasi dari model KNN dengan parameter default.
 Akurasi yang didapatkan dari model dengan parameter default adalah 45%, akurasi yang sangat rendah. Oleh karena itu perlu dilakukan hyperparameter tuning untuk menemukan parameter yang tepat dengan tujuan untuk mendapatkan model dengan akurasi yang lebih baik.
 
 ### Hyperparameter Tuning
-Untuk melakukan hyperparameter tuning, terlebih dahulu harus mengetahui parameter apa saja yang akan dilakukan tuning di model KNN ini. Hyperparameter yang digunakan untuk dilakukan tuning adalah leaf_size, p, dan n_neighbors. Penjelasan untuk tiap parameter yang akan di-tuning sebagai berikut:
-- leaf_size : merupakan ukuran atau size yang mengontrol titik dalam node tertentu.
-- p : merupakan power parameter untuk metrik Minkowski. Secara default menggunakan euclidean distance.
-- n_neighbors : merupakan jumlah tetangga pada algoritma KNN.
-
-Dalam melakukan hyperparameter tuning, akan digunakan GridSearchCV dari library Scikitlearn. Grid search sendiri berfungsi untuk menemukan parameter terbaik dalam model machine learning yang kita gunakan.  
+Untuk melakukan hyperparameter tuning, terlebih dahulu harus mengetahui parameter apa saja yang akan dilakukan tuning di model KNN ini. Hyperparameter yang digunakan untuk dilakukan tuning adalah leaf_size, p, dan n_neighbors. Dalam melakukan hyperparameter tuning, akan digunakan GridSearchCV dari library Scikitlearn. Grid search sendiri berfungsi untuk menemukan parameter terbaik dalam model machine learning yang kita gunakan.  
 ![hptune](https://user-images.githubusercontent.com/74854925/190021916-63803405-a812-4536-8a81-cfd9e913bada.jpg)    
 Setelah dilakukan hyperparameter tuning, didapatkan nilai terbaik untuk parameter yang akan kita gunakan yaitu leaf_size=1, p=1, dan n_neighbors=29. Selanjutnya, nilai parameter tersebut akan diaplikasian dan kemudian melihat akurasi yang didapatkan setelah melakukan hyperparameter tuning.  
 ![train2](https://user-images.githubusercontent.com/74854925/190022178-0d2d1be3-5d61-4c2d-a2d0-d696568ac73e.jpg)  
@@ -188,3 +192,13 @@ Terdapat 4 istilah sebagai representasi hasil proses klasifikasi pada confusion 
 Berikut confussion matrix dari model KNN hyper parameter tuning:  
 ![metric2](https://user-images.githubusercontent.com/74854925/190022292-2c4b1f10-9eaa-47f7-906d-c6016a03d7c6.jpg)  
 Berdasarkan confusion matrix di atas dapat disimpulkan dari 2000 data yang digunakan sebagai data uji, sebanyak 76,25% atau 1525 diprediksi benar (True Negative dan True Positive) oleh model, serta 23.5% atau 475 data salah diprediksi oleh model (False Positive dan False Negative).
+
+## Conclusion
+Berdasarkan percobaan yang telah dilakukan untuk membangun sebuah model KNN dalam memprediksi nasabah yang memiliki kemungkinan untuk meninggalkan bank atau menutup rekeningnya, didapatkan kesimpulan sebagai berikut:  
+1. Umur, sisa saldo, dan status keaktifan dari nasabah merupakan faktor yang paling berpengaruh terhadap kemungkinan seorang nasabah untuk menutup rekeningnya dari bank.  
+2. Dengan menggunakan model machine learning, bank dapat melakukan prediksi terhadap nasabah yang ada saat ini untuk kemudian meningkatkan fitur serta pelayanannya di masa depan dengan memanfaatkan data nasabah sebelumnya.
+
+## References
+1. [Peranan Bank Dalam Pembangunan Ekonomi Nasional](https://jurnal.ensiklopediaku.org/ojs-2.4.8-3/index.php/ensiklopedia/article/download/54/29)
+2. [Customer Loyalty in Banking Report](https://media.bain.com/Images/BAIN_REPORT_Loyalty_in_Retail_Banking_2013.pdf)
+3. [KNeighborsClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
