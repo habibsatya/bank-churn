@@ -102,19 +102,19 @@ Note:
 Dari gambar di atas kita lihat bahwa lebih banyak nasabah tidak aktif yang meninggalkan bank daripada nasabah yang aktif dan perbandingannya signifikan yang berarti bahwa status keaktifan nasabah memiliki pengaruh terhadap nasabah untuk meninggalkan bank.
 
 ##### Fitur Numerik
-![2crscore](assets/2crscore.png)  
-![2age](assets/2age.png)  
-![2tenure](assets/2tenure.png)  
-![2balance](assets/2balance.png)  
-![2num](assets/2num.png)  
-![2est](assets/2est.png)  
+![2crscore.png](assets/2crscore.png)  
+![2age.png](assets/2age.png)  
+![2tenure.png](assets/2tenure.png)  
+![2balance.png](assets/2balance.png)  
+![2num.png](assets/2num.png)  
+![2est.png](assets/2est.png)  
 Berdasarkan visualisasi data di atas, dapat diambil kesimpulan sebagai berikut:
 1. Distribusi nasabah yang meninggalkan bank berdasarkan credit score-nya tidak jauh berbeda (overlapping) satu sama lain, density nasabah yang pergi dan yang bertahan hampir sama sehingga dapat disimpulkan bahwa credit score tidak mempengaruhi nasabah untuk pergi meninggalkan bank.
 2. Nasabah yang bertahan di bank lebih banyak pada kelompok usia 20-45 tahun, sedangkan yang meninggalkan bank lebih banyak pada kelompok usia 30-60 tahun yang artinya kebanyakan nasabah dengan usia relatif muda memilih untuk bertahan di bank dan kebanyakan nasabah dengan usia relatif tua meninggalkan bank.
 3. Tidak ada insight khusus antara lama menjadi nasabah di bank dengan keluarnya customer bank, sisa tabungan di bank dengan keluarnya nasabah bank, dan produk yang dibeli melalui bank dengan keluarnya nasabah bank
 
 ##### Metrik Korelasi
-![3cormat](assets/3cormat.png)  
+![3cormat.png](assets/3cormat.png)  
 Note:  
 - Jika korelasi (x,y) diantara -0.1 sd 0.1 maka disebut sebagai korelasi yang buruk (bad correlation)
 - Jika korelasi (x,y) diantara 0.1 sd 0.5 maka disebut sebagai korelasi yang baik (good correlation)
@@ -164,11 +164,8 @@ Untuk melakukan hyperparameter tuning, terlebih dahulu harus mengetahui paramete
 
 Dalam melakukan hyperparameter tuning, akan digunakan GridSearchCV dari library Scikitlearn. Grid search sendiri berfungsi untuk menemukan parameter terbaik dalam model machine learning yang kita gunakan.  
 ![hptune.jpg](assets/hptune.jpg)  
-Setelah dilakukan hyperparameter tuning, didapatkan nilai terbaik untuk parameter yang akan kita gunakan yaitu leaf_size=1, p=1, dan n_neighbors=29. Selanjutnya, nilai parameter tersebut akan diaplikasian dan kemudian melihat akurasi yang didapatkan setelah melakukan hyperparameter tuning.
-```
-knn_tuned = KNeighborsClassifier(leaf_size=1, p=1, n_neighbors=29)
-knn_tuned.fit(X_train, y_train)
-```
+Setelah dilakukan hyperparameter tuning, didapatkan nilai terbaik untuk parameter yang akan kita gunakan yaitu leaf_size=1, p=1, dan n_neighbors=29. Selanjutnya, nilai parameter tersebut akan diaplikasian dan kemudian melihat akurasi yang didapatkan setelah melakukan hyperparameter tuning.  
+![train.jpg](assets/train.jpg)
 ![acc2.jpg](assets/acc2.jpg)  
 Ternyata setelah dilakukan hyperparameter tuning akurasi yang sebelumnya 45% sekarang menjadi 76%. Hal tersebut berarti hal baik karena kita telah menemukan parameter yang tepat untuk model yang kita gunakan.
 
