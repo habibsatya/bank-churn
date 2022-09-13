@@ -51,7 +51,7 @@ Setelah dilakukan pembagian, akan dilakukan EDA dengan univariate analysis untuk
 Pada univariate analysis, hanya melibatkan satu variate atau satu fitur saja.
 
 ##### Fitur Kategorikal
-![cat.jpg](assets/cat.jpg)
+![cat](https://user-images.githubusercontent.com/74854925/190021374-454e28de-e20a-4e51-bed1-1b5bb53b5f47.jpg)  
 Berdasarkan visualisasi data kategorikal di atas didapatkan kesimpulan sebagai berikut:  
 1. Hampir 50% nasabah berasal dari France, dan sisanya terbagi atas Spanyol dan Germany dengan komposisi yang hampir sama.
 2. Nasabah dengan jenis kelamin laki-laki lebih banyak dibandingkan dengan perempuan.
@@ -60,7 +60,7 @@ Berdasarkan visualisasi data kategorikal di atas didapatkan kesimpulan sebagai b
 5. Sekitar 20% dari nasabah memilih untuk meninggalkan bank.
 
 ##### Fitur Numerik
-![num.jpg](assets/num.jpg)  
+![num](https://user-images.githubusercontent.com/74854925/190021428-a493cd51-8708-4646-9f01-c69917398937.jpg)  
 Kemudian untuk visualisasi data numerik di atas didapatkan kesimpulan sebagai berikut:
 1. Secara umum, nasabah memiliki CreditScore normal / umumnya di 500-800
 2. Nasabah memiliki persebaran usia paling tinggi pada umur 30-40 tahun
@@ -73,7 +73,7 @@ Kemudian untuk visualisasi data numerik di atas didapatkan kesimpulan sebagai be
 Pada multivariate analysis menunjukkan hubungan antara dua atau lebih variabel pada data. Hubungan yang akan dilihat yaitu antara setiap variabel yang ada dengan variabel target yaitu 'Exited'.
 
 ##### Fitur Kategorikal
-![1geo.png](assets/1geo.png)  
+![1geo](https://user-images.githubusercontent.com/74854925/190021470-5621a6ca-bd80-47b1-9360-d141028ce7db.png)   
 Note:  
 0 = France  
 1 = Germany  
@@ -83,38 +83,38 @@ Berdasarkan gambar di atas, dapat diambil kesimpulan sebagai berikut:
 2. Spanyol memiliki lebih sedikit nasabah yang meninggalkan bank. 
 3. Lebih banyak nasabah yang meninggalkan bank di region Germany dengan rasio lebih dari 30%.
 
-![1gender.png](assets/1gender.png)  
+![1gender](https://user-images.githubusercontent.com/74854925/190021497-39d6f01e-76be-445a-bdf3-368d33cd120d.png)    
 Note:  
 0 = Perempuan (female)  
 1 = Laki-laki (male)
 Berdasarkan gambar di atas, lebih banyak nasabah perempuan yang meninggalkan bank.
 
-![1crcard.png](assets/1crcard.png)  
+![1crcard](https://user-images.githubusercontent.com/74854925/190021551-dd4b71be-a951-4548-975a-4a55c10011b0.png)    
 Note:  
 0 = Tidak mempunyai credit card  
 1 = Mempunyai credit card
 Dari gambar diatas dapat dilihat bahwa nasabah yang memiliki credit card maupun tidak memiliki credit card persentasenya tidak terlalu signifikan yang berarti pengaruh kepemilikan credit card tidak berpengaruh besar pada nasabah untuk meninggalkan bank.
 
-![1active.png](assets/1active.png)  
+![1active](https://user-images.githubusercontent.com/74854925/190021575-8ef169f7-9822-4c18-a879-a49dc900523c.png)    
 Note:  
 0 = Tidak aktif  
 1 = Aktif
 Dari gambar di atas kita lihat bahwa lebih banyak nasabah tidak aktif yang meninggalkan bank daripada nasabah yang aktif dan perbandingannya signifikan yang berarti bahwa status keaktifan nasabah memiliki pengaruh terhadap nasabah untuk meninggalkan bank.
 
 ##### Fitur Numerik
-![2crscore.png](assets/2crscore.png)  
-![2age.png](assets/2age.png)  
-![2tenure.png](assets/2tenure.png)  
-![2balance.png](assets/2balance.png)  
-![2num.png](assets/2num.png)  
-![2est.png](assets/2est.png)  
+![2crscore](https://user-images.githubusercontent.com/74854925/190021606-028a23f9-4065-43e1-b169-cff93357dd17.png)  
+![2age](https://user-images.githubusercontent.com/74854925/190021614-4758f1f0-a6f9-42a3-8561-482ffe9c0498.png)  
+![2tenure](https://user-images.githubusercontent.com/74854925/190021631-fd1724d1-2198-47b8-8db2-a49322188ebf.png)  
+![2balance](https://user-images.githubusercontent.com/74854925/190021635-f817e067-b8fa-4ae2-a37d-08fb6597460a.png)  
+![2num](https://user-images.githubusercontent.com/74854925/190021645-567d1e8a-4dbc-4ef2-952f-a5a6f46e210b.png)  
+![2est](https://user-images.githubusercontent.com/74854925/190021661-4ca689b1-9754-4995-8135-2c46f12e824d.png)  
 Berdasarkan visualisasi data di atas, dapat diambil kesimpulan sebagai berikut:
 1. Distribusi nasabah yang meninggalkan bank berdasarkan credit score-nya tidak jauh berbeda (overlapping) satu sama lain, density nasabah yang pergi dan yang bertahan hampir sama sehingga dapat disimpulkan bahwa credit score tidak mempengaruhi nasabah untuk pergi meninggalkan bank.
 2. Nasabah yang bertahan di bank lebih banyak pada kelompok usia 20-45 tahun, sedangkan yang meninggalkan bank lebih banyak pada kelompok usia 30-60 tahun yang artinya kebanyakan nasabah dengan usia relatif muda memilih untuk bertahan di bank dan kebanyakan nasabah dengan usia relatif tua meninggalkan bank.
 3. Tidak ada insight khusus antara lama menjadi nasabah di bank dengan keluarnya customer bank, sisa tabungan di bank dengan keluarnya nasabah bank, dan produk yang dibeli melalui bank dengan keluarnya nasabah bank
 
 ##### Metrik Korelasi
-![3cormat.png](assets/3cormat.png)  
+![3cormat](https://user-images.githubusercontent.com/74854925/190021706-4906dfda-9701-4a92-9c43-ea126853bf58.png)
 Note:  
 - Jika korelasi (x,y) diantara -0.1 sd 0.1 maka disebut sebagai korelasi yang buruk (bad correlation)
 - Jika korelasi (x,y) diantara 0.1 sd 0.5 maka disebut sebagai korelasi yang baik (good correlation)
@@ -133,27 +133,22 @@ Untuk mempermudah dalam memproses data ketika tahap pemodelan nanti, maka perlu 
 
 ### Train-Test-Split
 Dengan menggunakan fungsi train_test_split dari library Scikitlearn untuk melakukan pembagian data latih dan data uji dengan perbandingan sebanyak 80% dari total dataset sebagai data latih dan 20% sebagai data uji. Potongan kodenya sebagai berikut.  
-![tts.jpg](assets/tts.jpg)  
+![tts](https://user-images.githubusercontent.com/74854925/190021753-5be3f8be-5e46-4ed5-b338-71b1b4c36bc4.jpg)    
 Berdasarkan potongan kode di atas, dapat dilihat bahwa kini dataset terbagi menjadi 2 bagian yakni 8.000 data menjadi data latih dan 2.000 data menjadi data uji dengan total 10.000 data pada dataset.
 
 ### Standarization
 Standardisasi adalah teknik transformasi yang paling umum digunakan dalam tahap persiapan pemodelan. Standarisasi akan dilakukan dengan menggunakan teknik StandarScaler dari library Scikitlearn. StandardScaler melakukan proses standarisasi fitur dengan mengurangkan mean (nilai rata-rata) kemudian membaginya dengan standar deviasi untuk menggeser distribusi. StandardScaler menghasilkan distribusi dengan standar deviasi sama dengan 1 dan mean sama dengan 0. Sekitar 68% dari nilai akan berada di antara -1 dan 1. Untuk menghindari kebocoran informasi pada data uji, fitur standarisasi hanya diterapkan pada data latih. Kemudian, pada tahap evaluasi, akan dilakukan standarisasi pada data uji. Berikut potongan kode untuk standarisasi.  
-![std.jpg](assets/std.jpg)
+![std](https://user-images.githubusercontent.com/74854925/190021800-f7afd033-8d7f-402c-a871-784febeea1a4.jpg)
 
 ## Modeling
 K-Nearest Neighbor (KNN) adalah algoritma yang relatif sederhana dibandingkan dengan algoritma lain. Algoritma KNN menggunakan 'kesamaan fitur' untuk memprediksi nilai dari setiap data yang baru. Dengan kata lain, setiap data baru diberi nilai berdasarkan seberapa mirip titik tersebut dalam set pelatihan.
 KNN bekerja dengan membandingkan jarak satu sampel ke sampel pelatihan lain dengan memilih sejumlah k tetangga terdekat (dengan k adalah sebuah angka positif). Itulah mengapa algoritma ini dinamakan k-nearest neighbor (sejumlah k tetangga terdekat). KNN bisa digunakan untuk kasus klasifikasi dan regresi. Pada proyek kali ini, KNN akan akan digunakan untuk kasus klasifikasi.
 
 ### Train Data
-Training data dengan menggunakan parameter default dari model KNN yang dipanggil melalui library Scikitlearn dan meng-import KNeighborsClassifier model.
-```
-from sklearn.neighbors import KNeighborsClassifier
-
-knn = KNeighborsClassifier()
-knn.fit(X_train, y_train)
-```
+Training data dengan menggunakan parameter default dari model KNN yang dipanggil melalui library Scikitlearn dan meng-import KNeighborsClassifier model.  
+![train](https://user-images.githubusercontent.com/74854925/190021841-8733c678-f235-4ed4-b0fd-c410de91887b.jpg)  
 Selanjutnya, melihat akurasi dari model KNN dengan parameter default.  
-![acc1.jpg](assets/acc1.jpg)  
+![acc1](https://user-images.githubusercontent.com/74854925/190021878-353d951f-e4a7-4ec6-aaa3-4da7add7bfe2.jpg)   
 Akurasi yang didapatkan dari model dengan parameter default adalah 45%, akurasi yang sangat rendah. Oleh karena itu perlu dilakukan hyperparameter tuning untuk menemukan parameter yang tepat dengan tujuan untuk mendapatkan model dengan akurasi yang lebih baik.
 
 ### Hyperparameter Tuning
@@ -163,10 +158,10 @@ Untuk melakukan hyperparameter tuning, terlebih dahulu harus mengetahui paramete
 - n_neighbors : merupakan jumlah tetangga pada algoritma KNN.
 
 Dalam melakukan hyperparameter tuning, akan digunakan GridSearchCV dari library Scikitlearn. Grid search sendiri berfungsi untuk menemukan parameter terbaik dalam model machine learning yang kita gunakan.  
-![hptune.jpg](assets/hptune.jpg)  
+![hptune](https://user-images.githubusercontent.com/74854925/190021916-63803405-a812-4536-8a81-cfd9e913bada.jpg)    
 Setelah dilakukan hyperparameter tuning, didapatkan nilai terbaik untuk parameter yang akan kita gunakan yaitu leaf_size=1, p=1, dan n_neighbors=29. Selanjutnya, nilai parameter tersebut akan diaplikasian dan kemudian melihat akurasi yang didapatkan setelah melakukan hyperparameter tuning.  
-![train.jpg](assets/train.jpg)
-![acc2.jpg](assets/acc2.jpg)  
+![train2](https://user-images.githubusercontent.com/74854925/190022178-0d2d1be3-5d61-4c2d-a2d0-d696568ac73e.jpg)  
+![acc2](https://user-images.githubusercontent.com/74854925/190022190-38bf77f3-50db-4fd3-86b5-2f9df26e6542.jpg)  
 Ternyata setelah dilakukan hyperparameter tuning akurasi yang sebelumnya 45% sekarang menjadi 76%. Hal tersebut berarti hal baik karena kita telah menemukan parameter yang tepat untuk model yang kita gunakan.
 
 ## Evaluation
@@ -179,7 +174,7 @@ Selanjutnya mengukur performa dari model yang telah dibuat dengan melihat persen
 - f1-score : f1-score merupakan perbandingan rata-rata precision dan recall yang dibobotkan.
 accuracy : merupakan rasio prediksi Benar (positif dan negatif) dengan keseluruhan data.
 
-![metric1.jpg](assets/metric1.jpg)  
+![metric1](https://user-images.githubusercontent.com/74854925/190022264-642c4991-3e6e-4485-a086-2a9de74c8d2c.jpg)  
 Dari output classification report di atas, dapat dilihat performa dari model yaitu 0.76 yang berarti dari 2000 data test yang ada, sekitar 76% data yang diklasifikasikan dengan benar sesuai dengan classnya.
 
 ### Confusion Matrix
@@ -191,5 +186,5 @@ Terdapat 4 istilah sebagai representasi hasil proses klasifikasi pada confusion 
 - False Negative (FN): Merupakan data positif namun diprediksi sebagai data negatif.
 
 Berikut confussion matrix dari model KNN hyper parameter tuning:  
-![metric2.jpg](assets/metric2.jpg)  
+![metric2](https://user-images.githubusercontent.com/74854925/190022292-2c4b1f10-9eaa-47f7-906d-c6016a03d7c6.jpg)  
 Berdasarkan confusion matrix di atas dapat disimpulkan dari 2000 data yang digunakan sebagai data uji, sebanyak 76,25% atau 1525 diprediksi benar (True Negative dan True Positive) oleh model, serta 23.5% atau 475 data salah diprediksi oleh model (False Positive dan False Negative).
